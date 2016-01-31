@@ -1,4 +1,7 @@
 module.exports = {
+  watch: {
+    src: 'public/**/*.*'
+  },
   build: {
     bower: {
       src: 'public/bower_components/**/*.*',

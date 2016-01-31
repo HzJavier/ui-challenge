@@ -1,6 +1,3 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-
 var HelloMessage = React.createClass({
   render: function () {
     return (
@@ -11,4 +8,4 @@ var HelloMessage = React.createClass({
   }
 });
 
-ReactDOM.render(<HelloMessage name="John"/>, 'body');
+ReactDOM.render(<HelloMessage name="John"/>, document.getElementById('lol'));

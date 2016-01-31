@@ -1,9 +1,5 @@
 module.exports = {
   build: {
-   components: {
-      src: 'public/components/**/*.*',
-      dest: 'dist/components'
-    },
     bower: {
       src: 'public/bower_components/**/*.*',
       dest: 'dist/bower_components'
@@ -14,7 +10,7 @@ module.exports = {
     }
   },
   react: {
-    src: 'public/*.js',
-    dest: 'dist'
+    src: 'public/components/*.js',
+    dest: 'dist/components'
   }  
 };

@@ -1,8 +1,8 @@
 module.exports = {
   build: {
     bower: {
-      src: 'public/components/**/*.*',
-      dest: 'dist/components'
+      src: 'public/bower_components/**/*.*',
+      dest: 'dist/bower_components'
     },
     markup: {
       src: 'public/*.html',

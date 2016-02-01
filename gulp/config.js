@@ -1,19 +1,26 @@
+var devFolder = 'public/';
+var distFolder = 'dist/';
+
 module.exports = {
   watch: {
-    src: 'public/**/*.*'
+    src: devFolder + '**/*.*'
   },
   build: {
     bower: {
-      src: 'public/bower_components/**/*.*',
-      dest: 'dist/bower_components'
+      src: devFolder + 'bower_components/**/*.*',
+      dest: distFolder + 'bower_components'
     },
     markup: {
-      src: 'public/*.html',
-      dest: 'dist'
+      src: devFolder + '*.html',
+      dest: distFolder
     }
   },
   react: {
-    src: 'public/components/*.js',
-    dest: 'dist/components'
+    src: devFolder + 'components/*.js',
+    dest: distFolder + 'components'
+  },
+  less: {
+    src: devFolder + 'styles/**/*.less',
+    dest: distFolder + 'styles' 
   }  
 };

@@ -25,5 +25,3 @@ var MetroMusicLogin = React.createClass({
     )
   }
 });
-
-ReactDOM.render(<MetroMusicLogin/>, document.getElementById('lol'));

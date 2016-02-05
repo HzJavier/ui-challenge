@@ -1,7 +1,7 @@
 var config = require('../config').build;
 var gulp = require('gulp');
 
-gulp.task('build', ['copy-fonts', 'copy-assets', 'copy-bower', 'copy-markup', 'react', 'less'], function () {
+gulp.task('build', ['copy-fonts', 'copy-assets', 'copy-bower', 'copy-markup', 'browserify', 'less'], function () {
   return;
 });
 

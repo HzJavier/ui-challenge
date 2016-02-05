@@ -1,23 +1,36 @@
-var HelloMessage = React.createClass({
-  onMenuClick: function () {
-    ReactDOM.render(<MetroMusicLogin/>, document.getElementById('main'));   
-  },
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
+
+/**
+ * Components
+ */
+import MetroMusicLogin from './metro-music'
+
+/**
+ * Main container
+ */
+var App = React.createClass({
   render: function () {
     return (
       <div>
-        Daily UI challenges, by Vania Vega 
+        <h1>App</h1>
 
         <ul>
-          <li
-            onClick={this.onMenuClick}>
-            Day 1 - Metro Music
-          </li>
+          <li><Link to="/day-1">Day 1</Link></li>
         </ul>
+
+        {this.props.children}
       </div>
-    )
-  }
+    );
+  } 
 });
 
-ReactDOM.render(<HelloMessage name="John"/>, document.getElementById('main'));
-
-var j
+render((
+  <Router>
+    <Route path="/" component={App}>
+      <Route path="day-1" component={MetroMusicLogin} />
+    </Route>
+  </Router>
+), document.getElementById('main'));

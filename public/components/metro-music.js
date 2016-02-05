@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 var MetroMusicLogin = React.createClass({
   render: function () {
     return (
@@ -25,3 +28,5 @@ var MetroMusicLogin = React.createClass({
     )
   }
 });
+
+export default MetroMusicLogin

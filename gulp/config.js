@@ -10,6 +10,10 @@ module.exports = {
       src: devFolder + 'bower_components/**/*.*',
       dest: distFolder + 'bower_components'
     },
+    assets: {
+      src: devFolder + 'assets/**/*.*',
+      dest: distFolder + 'assets'
+    },
     markup: {
       src: devFolder + '*.html',
       dest: distFolder

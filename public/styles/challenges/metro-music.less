@@ -1,5 +1,6 @@
 @import "../colors";
 
+
 .metro-music-login {
   @main-width: 350px;
   @input-height: 40px;
@@ -9,7 +10,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 12px;
-  background-image: url('/assets/background.jpg');
+  background-image: url('/assets/day-1/background.jpg');
   background-size: @main-width auto;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -18,15 +19,17 @@
   text-align: center;
 
   .title {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'AngillaTattoo';
   }
 
   button {
     margin: auto;
     display: block;
     border: 0px;
-    height: @input-height;
+    height: @input-height + 3px;
     width: 100%;
     margin-bottom: 10px;
     color: white;
@@ -35,6 +38,18 @@
 
     &.facebook-btn {
       background-color: @facebook-color;
+
+      &:after {
+        background-image: url('/assets/facebook-icon.png');
+        background-repeat: no-repeat;
+        background-size: 10px auto;
+        content: " ";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        margin-top: -2px;
+        margin-left: 10px;
+      }
     }
 
     &.create-btn {
@@ -55,7 +70,7 @@
       display: block;
       height: @input-height;
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       font-size: 14px;
       padding: 0px 10px;
       background-color: rgba(255,255,255, 0.7);
@@ -65,7 +80,7 @@
 
   .disclaimer {
     text-align: left;
-    font-size: 11px;
+    font-size: 10px;
     padding-bottom: 100px;
   }
 }

@@ -1,0 +1,111 @@
+.landing-page-wrapper {
+  @asset-route: "../assets/day-3"; 
+  width: 1000px;
+  margin: auto;
+  border: 10px solid #DDD;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .main-section {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 8px;
+    background-color: rgb(201, 201, 201);
+    background-image: url("@{asset-route}/main-section-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .menu {
+      position: absolute;
+      background-image: url("@{asset-route}/menu-icon.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    &:before {
+      position: relative;
+      display: block;
+      content: " "; 
+      background-image: url("@{asset-route}/header.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 220px;
+      height: 20px;
+      top: 20px;
+      margin: auto;
+    }
+
+
+    .text-wrapper {
+      padding: 100px 0px 0px 30px;
+      max-width: 270px;
+      color: rgb(73, 73, 73);
+
+      .title, .subtitle {
+        font-family: 'AvenirNextBold';
+      }
+
+      .title {
+        font-size: 30px;
+        line-height: 35px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .info {
+        font-family: Arial, sans-serif;
+        font-size: 10.5px;
+        line-height: 15px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        background-color: rgb(228, 177, 73);
+        color: white;
+        border: none;
+        padding: 5px 50px;
+        font-size: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .secondary-section-wrapper {
+    @section-h: 250px;
+    @section-w: 100%;
+    width: @section-w;
+    height: @section-h;
+
+    .secondary-section {
+      @horizontal-separation: 4px;
+      height: @section-h;
+      width: calc(@section-w/2 ~"-" @horizontal-separation);
+      box-sizing: border-box;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &.left-section {
+        margin-right: @horizontal-separation;
+        background-color: rgb(186, 199, 215);
+        background-image: url("@{asset-route}/secondary-section-left.png");
+    }
+     
+      &.right-section {
+        margin-left: @horizontal-separation;
+        background-color: rgb(135, 167, 184);
+        background-image: url("@{asset-route}/secondary-section-right.png");
+     } 
+    }
+
+  }
+}
